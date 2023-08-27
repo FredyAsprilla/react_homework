@@ -1,0 +1,29 @@
+.pokemon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pokemon-item {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .pokemon-image {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+}
+
+  
