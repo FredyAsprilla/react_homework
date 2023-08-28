@@ -12,7 +12,7 @@ import Dog from './components/dog/dog';
 import Ram from './components/ram/ram';
 import BusquedaLibrosGoogle from './components/BusquedaLibrosGoogle/BusquedaLibrosGoogle';
 import ClimaActual from './components/ClimaActual/ClimaActual';
-//import RegistroUsuario from './components/RegistroUsuario/RegistroUsuario';
+import RegistroUsuario from './components/RegistroUsuario/RegistroUsuario';
 
 
 
@@ -28,7 +28,7 @@ function App() {
         <Route path="dog/*" element={<Dog />} />
         <Route path="ram/*" element={<Ram />} />
         <Route path="BusquedaLibrosGoogle/*" element={<BusquedaLibrosGoogle />} />
-              
+         <Route path="RegistroUsuario/*" element={<RegistroUsuario />} />     
       </Routes>
     </BrowserRouter>
   );
