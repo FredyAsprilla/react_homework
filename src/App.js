@@ -14,11 +14,7 @@ import BusquedaLibrosGoogle from './components/BusquedaLibrosGoogle/BusquedaLibr
 import ClimaActual from './components/ClimaActual/ClimaActual';
 import RegistroUsuario from './components/RegistroUsuario/RegistroUsuario';
 
-const App = () => {
-const [usuarios, setUsuarios] = useState([]);
-const handleUsuarioRegistrado = (nuevoUsuario) => {
-  setUsuarios([...usuarios, nuevoUsuario]);
-};
+
 
 function App() {
   return (
@@ -32,11 +28,10 @@ function App() {
         <Route path="dog/*" element={<Dog />} />
         <Route path="ram/*" element={<Ram />} />
         <Route path="BusquedaLibrosGoogle/*" element={<BusquedaLibrosGoogle />} />
-        <Route path="RegistroUsuario/*" element={<RegistroUsuario />} />    
-        <RegistroUsuario onUsuarioRegistrado={handleUsuarioRegistrado} />    
+        <Route path="RegistroUsuario/*" element={<RegistroUsuario />} />     
       </Routes>
     </BrowserRouter>
   );
 }
-}
+
 export default App;
