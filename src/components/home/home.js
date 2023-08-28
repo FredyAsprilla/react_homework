@@ -2,7 +2,9 @@ import './home.css';
 
 function HomeComponent() {
   return <div className="homeComponent">
+    <h1>Biblioteca Publica Web</h1>
     <div className="menu1">
+      
             <ul className='opciones'>
                 <li className='uno'><a href='/ClimaActual' className='t1'>Consultar Clima Ciudades</a></li>
                 <li className='dos'><a href='/pokemon' className='t1'>API POKEMON</a></li>
