@@ -25,3 +25,4 @@ function HomeComponent() {
 }
 
 export default HomeComponent;
+// Integrantes del grupo: Fredy Joan Asprilla Mena
