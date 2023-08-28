@@ -1,32 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-function DBZComponent() {
-  const [characters, setCharacters] = useState([]);
+const BusquedaLibrosGoogle = () => {
+  const [terminoBusqueda, setTerminoBusqueda] = useState('');
+  const [resultados, setResultados] = useState([]);
 
-  useEffect(() => {
-    axios.get('https://dragon-ball-api.herokuapp.com/api/character')
-      .then(response => {
-        setCharacters(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching Dragon Ball characters:', error);
-      });
-  }, []);
+  const API_KEY = 'TU_CLAVE_DE_API'; // Reemplaza con tu clave de API
+
+  const handleBusqueda = async () => {
+    try {
+      const response = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes?q=${terminoBusqueda}&key=${API_KEY}`
+      );
+      setResultados(response.data.items);
+    } catch (error) {
+      console.error('Error al realizar la búsqueda', error);
+    }
+  };
 
   return (
     <div>
-      <h2>Dragon Ball personajes</h2>
+      <h2>Buscar Libros en Google Books</h2>
+      <input
+        type="text"
+        placeholder="Título, Autor, Palabras clave..."
+        value={terminoBusqueda}
+        onChange={(e) => setTerminoBusqueda(e.target.value)}
+      />
+      <button onClick={handleBusqueda}>Buscar</button>
       <ul>
-        {characters.map(character => (
-          <li key={character.id}>
-            <img src={character.image} alt={character.name} style={{ maxWidth: '100px' }} />
-            {character.name}
+        {resultados.map((libro) => (
+          <li key={libro.id}>
+            <h3>{libro.volumeInfo.title}</h3>
+            <p>Autores: {libro.volumeInfo.authors && libro.volumeInfo.authors.join(', ')}</p>
+            <p>Editorial: {libro.volumeInfo.publisher}</p>
+            <p>Año de publicación: {libro.volumeInfo.publishedDate}</p>
           </li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
-export default DBZComponent;
+export default BusquedaLibrosGoogle;
