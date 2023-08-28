@@ -9,8 +9,8 @@ import Country from './components/country/country';
 import Cat from './components/cat/cat';
 import Dog from './components/dog/dog';
 import Ram from './components/ram/ram';
-import ClimaActual from './components/ClimaActual/ClimaActual';
 import BusquedaLibrosGoogle from './components/BusquedaLibrosGoogle/BusquedaLibrosGoogle';
+import ClimaActual from './components/ClimaActual/ClimaActual';
 
 function App() {
   return (
