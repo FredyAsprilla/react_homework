@@ -5,7 +5,7 @@ const BusquedaLibrosGoogle = () => {
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
   const [resultados, setResultados] = useState([]);
 
-  const API_KEY = 'TU_CLAVE_DE_API'; // Reemplaza con tu clave de API
+  const API_KEY = 'AIzaSyC_O3hxXlB1p8nv73ZgDLWAUThZhj3mxOc'; 
 
   const handleBusqueda = async () => {
     try {

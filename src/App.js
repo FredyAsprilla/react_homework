@@ -9,8 +9,8 @@ import Country from './components/country/country';
 import Cat from './components/cat/cat';
 import Dog from './components/dog/dog';
 import Ram from './components/ram/ram';
-import DBZ from './components/dbz/dbz';
 import ClimaActual from './components/ClimaActual/ClimaActual';
+import BusquedaLibrosGoogle from './components/BusquedaLibrosGoogle/BusquedaLibrosGoogle';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Route path="country/*" element={<Country />} />
         <Route path="dog/*" element={<Dog />} />
         <Route path="ram/*" element={<Ram />} />
-        <Route path="dbz/*" element={<DBZ />} />
+        <Route path="BusquedaLibrosGoogle/*" element={<BusquedaLibrosGoogle />} />
       </Routes>
     </BrowserRouter>
   );
