@@ -3,6 +3,7 @@ import './home.css';
 function HomeComponent() {
   return <div className="homeComponent">
     <h1>Biblioteca Publica Web</h1>
+    <tittle>Biblioteca Publica Web</tittle>
     <div className="menu1">
       
             <ul className='opciones'>
