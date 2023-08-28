@@ -13,9 +13,9 @@ function HomeComponent() {
     <div className="menu1">
     <ul className='opciones'>
                 <li className='cuatro'><a href='/dog' className='t1'>API PERROS</a></li>
-                {/* AQUI LAS ULTIMAS DOS APIS */}
                 <li className='tres'><a href='/ram' className='t1'>API RICK AND MORTY</a></li>
                 <li className='uno'><a href='/BusquedaLibrosGoogle' className='t1'> Consultar Libros Google</a></li>
+                <li className='dos'><a href='/RegistroUsuario' className='t1'> Registrar Usuario</a></li>
             </ul>
     </div>
   </div>;
